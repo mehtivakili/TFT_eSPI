@@ -1,3 +1,19 @@
+** I used a ili9342 instead of ili9341 and I should change the height and width from 280*320 to 320*240 in the user setup setting if other settings not being changed to 9342 do the following in the TFT_drivers/ili9341_Defines :
+
+#if defined (ILI9341_DRIVER) || defined (ILI9341_2_DRIVER)
+  #define TFT_WIDTH  320    <===
+  #define TFT_HEIGHT 240    <===
+#elif defined (ILI9342_DRIVER)
+  #define TFT_WIDTH  320
+  #define TFT_HEIGHT 240
+#endif
+ **
+
+
+
+
+
+
 A ["Discussions"](https://github.com/Bodmer/TFT_eSPI/discussions) facility has been added for Q&A etc. Use the ["Issues"](https://github.com/Bodmer/TFT_eSPI/issues) tab only for problems with the library. Thanks!
 # News
 1. The Create_font Processing sketch has been updated to automatically create a complete C header file. The automatic opening of the font folder can also be disabled within the Processing sketch. (Thanks to Pierre-Loup Martin).
