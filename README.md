@@ -1,11 +1,17 @@
-I used a ili9342 instead of ili9341 and I should change the height and width from 280*320 to 320*240 in the user setup setting if other settings not being changed to 9342 do the following in the TFT_drivers/ili9341_Defines :
+I used a ili9342 instead of ili9341 and I should change the height and width from 280\*320 to 320\*240 in the user setup setting if other settings not being changed to 9342 do the following in the TFT_drivers/ili9341_Defines :
 
 #if defined (ILI9341_DRIVER) || defined (ILI9341_2_DRIVER)
+ 
   #define TFT_WIDTH  320    <===
+
   #define TFT_HEIGHT 240    <===
+
 #elif defined (ILI9342_DRIVER)
+
   #define TFT_WIDTH  320
+
   #define TFT_HEIGHT 240
+
 #endif
 
 
